@@ -2,11 +2,12 @@
     function printSinHeader($minutes)
     {
         $html = '<table>';
-        $html .= "<th>Deg\Min</th>";
+        $html .= '<tr><th> Deg\Min </th>';
         for($j = 0; $j < 60; $j += $minutes)
         {
             $html.='<th> min='.$j.'</th>';
         }
+	$html .= '</tr>';
         return $html;
     }
 
@@ -32,11 +33,7 @@
             }
             $html .= '</tr>';
         }
+        $html .= '</table>';
         return $html;
-    }
-    
-    function closeTable()
-    {
-        return('</table>');
     }
     
