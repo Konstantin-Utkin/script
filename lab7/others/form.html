@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="css/signup.css" />
+    </head>
+    <body>
+    <form class="signupform" action="signup.php" method="post" id="loginform">
+        <div class="signupheader">
+            <div class="colorheader">
+                Sign Up
+            </div>
+            <div>
+                It's free and always will be
+            </div>
+        </div>
+        <table class="tablesignup">
+            <tr>
+                <td class="tablelem">
+                    <label class="labelfield">First Name:</label>
+                </td>
+                <td class="tabldata">
+                    <input class="inputfield" type="text" name="fname" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="tablelem">
+                    <label class="labelfield" >Last Name:</label>
+                </td>
+                <td class="tabldata">
+                    <input class="inputfield" type="text" name="lname" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tablelem">
+                    <label class="labelfield" >Your Email:</label>
+                </td>
+                <td class="tabldata">
+                    <input class="inputfield" type="text" name="email" value="" />
+                </td>
+            </tr>
+            <tr>    
+                <td class="tablelem">
+                    <label class="labelfield" >Re-enter Email:</label>
+                </td>
+                <td class="tabldata">
+                    <input class="inputfield" type="text" name="remail" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tablelem">
+                    <label class="labelfield" >New Password:</label>
+                </td>
+                <td class="tabldata">
+                    <input class="inputfield" type="password" name="password" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tablelem">
+                    <label class="labelfield" >I am:</label>
+                </td>
+                <td class="tabldata">
+                    <select  class="selectfield" name="sex" >
+                        <option selected disabled>Select Sex:</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tablelem">
+                    <label class="labelfield" >Birthday:</label>
+                </td>
+                <td class="tabldata">
+                    <select  class="selectfield" name="month">
+                        <option selected disabled>Month:</option>
+                    </select>
+                    <select  class="selectfield" name="day">
+                        <option selected disabled>Day:</option>
+                    </select>
+                    <select  class="selectfield" name="year">
+                        <option selected disabled>Year:</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tablelem">
+                </td>
+                <td class="tabldata">
+                    <a class="hrefsignup" href="http://htmlbook.ru/html/!doctype" title="info">Why do I need to provide this?</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tablelem">
+                </td>
+                <td class="tabldata">
+                    <input class="submitfield" type="submit" value="Sign Up" id="submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+  </body>
+</html>
