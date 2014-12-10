@@ -1,0 +1,40 @@
+.content 
+{
+  width: 100%; /* Ширина слоя */
+  position: fixed; /* Фиксированное положение */
+  height: 100%;
+  margin: 0 auto 50px; /* Выравнивание по центру */
+}
+
+.footer 
+{
+  position: fixed; /* Фиксированное положение */
+  left: 0; bottom: 0; /* Левый нижний угол */
+  padding: 10px; /* Поля вокруг текста */
+  background: #39b54a; /* Цвет фона */
+  color: #fff; /* Цвет текста */
+  width: 100%; /* Ширина слоя */
+}
+
+.sidebar
+{
+  float: left;
+  background: blue; /* Цвет фона */
+  width: 20%; /* Ширина слоя */
+  height: 100%;
+}
+
+.mainblock
+{
+  float: left;
+  width: 80%; /* Ширина слоя */
+  height: 100%;
+  background: red; /* Цвет фона */
+  overflow: auto;
+}
+
+.header {
+ display: block; /* Для старых браузеров */
+ height: 100px; /* Высота шапки */
+ background: yellow;
+}

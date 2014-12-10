@@ -61,9 +61,9 @@
     {
         $result = 0;
         $arrayLetters = array();
-	for ($i = 0; $i < strlen($password); $i++)
-            if (in_array($password[$i], $arrayLetters)) 
-	    {
+    for($i = 0; $i < strlen($password); $i++)
+      if (in_array($password[$i], $arrayLetters)) 
+      {
                 $result -= 2;
             }
             else
