@@ -1,12 +1,19 @@
 <?php
 
-  require_once("include/common.inc.php");
+    require_once("include/common.inc.php");
 
-  $email = getEmailFromRequest();
-  $people = new People;
-  $people = getSurveyFromFile($email, $people);
-  printPeopleArray($people);
-    
+    $email = getEmailFromRequest();
+    $Man = new Man;
+  
+    if($email)
+    {
+        $Man = getSurveyFromFile($email, $Man);
+        printManClass($Man);
+    }
+    else
+        echo("param 'email' is empty");
+ 
+
 
 
 

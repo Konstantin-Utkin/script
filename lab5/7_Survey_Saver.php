@@ -1,10 +1,21 @@
 <?php
 
-  require_once("include/common.inc.php");
+    require_once("include/common.inc.php");
 
-  $people = new People;
-  $people = getSurveyFromRequest($people);
-  saveSurvayToFile($people);
+    $Man = new Man;
+    $Man = getSurveyFromRequest($Man);
+    if($Man->email)
+    {
+        $saveResult = saveSurvayToFile($Man);
+        if($saveResult)    
+            echo("ok");
+        else
+            echo("cant save file");
+    }
+    else
+        echo("param 'email' is empty");
+ 
+
 
 
 
