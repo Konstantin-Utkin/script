@@ -1,0 +1,64 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.form
+{
+    font-family: Arial;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    margin-left: -250px;
+    background: linear-gradient(to top, #dfe3ef, #fcfdfe);
+    padding: 10px, 10px, 3px, 3px;
+} 
+
+.title
+{
+    padding: 0 0 10px 7px;
+    border-bottom: 1px solid #dfe3ef;
+    margin-bottom: 10px;
+}
+
+.title h1
+{
+    font-size: 26px;
+    color: darkblue;
+    padding-bottom: 3px;
+}
+
+input
+{
+    width: 100%;
+    margin-top: 6px;
+    border: 0;
+}
+
+select
+{
+    height: 33px;
+    border: 1px solid #9babc5;
+}
+
+label
+{
+    width: 110px;
+    text-align: right;
+    font-size: 14px;
+    display: block;
+    float: left;
+    margin: 7px 7px 0 0;
+}
+
+.formfield
+{
+    width: 320px;
+    height: 33px;
+    border: 1px solid #9babc5;
+    background: #fff;
+    float: left;
+}

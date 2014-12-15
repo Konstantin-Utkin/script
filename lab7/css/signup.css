@@ -1,30 +1,55 @@
-.tablelem
+.main
 {
+    width: 400px;
+    height: 370px;
+    margin: 10px;  
+}
+
+.line
+{
+    width: 395px;
+    height: 42px;  
+    clear: both;
+}
+
+.right
+{
+    width: 266px;
+    border: 1px solid #9babc5;
+    background: #fff;
+    height: 35px;  
+    float: left;
+}
+
+.labelfield
+{
+    font-size: 14px;
+    width: 120px;
+    height: 35px;  
+    float: left;
     text-align: right;
-    font: 12px sans-serif;
-    width: 110px;
-}
-.tabledata
-{
-    width: 275px;
-}
-.tablesignup
-{
-    height: 37px;    
-    padding: 10px;
+    margin-right: 7px;
+    line-height: 37px;
 }
 
 .inputfield
 {
-    height: 32px;
+    height: 31px;
     width: 263px; 
-    border: 1px solid rgb(150, 166, 197);
+    margin: 1px;
+    border: 0;
+}
+
+.registered
+{
+    font-size: 14px;
+    color: green;
 }
 
 .selectfield
 {
-    height: 32px;
-    border: 1px solid rgb(150, 166, 197);
+    height: 35px;
+    border: 1px solid #9babc5;
 }
 
 
@@ -44,11 +69,20 @@
 
 .signupform
 {
-    width: 390px; 
+    font-family: Arial;
+    width: 500px;
+    height: 470px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    margin-left: -250px;
+    background: linear-gradient(to top, #dfe3ef, #fcfdfe);
+    padding: 10px 10px 3px 3px;
 }
 
 a.hrefsignup
 {
+    margin-left: 130px;
     text-decoration: none; 
     font: 11px sans-serif;
 } 
@@ -60,9 +94,15 @@ a.hrefsignup:hover
 
 .submitfield
 {
-    height: 29px;
+    height: 35px;
     width: 110px; 
+    margin-top: 5px;
     background: linear-gradient(to top, #75ae5c, #67a54b);
     color: white;
     border: 1px solid rgb(150, 166, 197);
+}
+
+.error
+{
+    color: red;
 }

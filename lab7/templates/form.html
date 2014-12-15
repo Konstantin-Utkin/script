@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <title>Sign Up</title>
+      <link rel="stylesheet" href="css/signup.css" />
+  </head>
+  <body>
+    <form class="signupform" action="signup.php" method="post" id="loginform">
+      <div class="signupheader">
+        <div class="colorheader">
+          Sign Up
+        </div>
+        <div>
+          It's free and always will be
+        </div>
+      </div>
+      <div class="main">
+
+        <div class="line">
+          <label class="labelfield {if $error_fname} error {/if}">First Name:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="fname" value="{$fname}" />
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield {if $error_lname} error {/if}" >Last Name:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="lname" value="{$lname}" />
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield{if $error_email} error {/if}" >Your Email:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="email" value="{$email}" />
+          </div>
+        </div>
+        <div class="line">
+          <label class="labelfield{if $error_remail} error {/if}" >Re-enter Email:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="remail" value="{$remail}" />
+          </div>
+        </div>
+        <div class="line">
+          <label class="labelfield{if $error_password} error {/if}" >New Password:</label>
+          <div class="right">
+            <input class="inputfield" type="password" name="password" value="{$password}" />
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield{if $error_sex} error {/if}" >I am:</label>
+          <div>
+            <select  class="selectfield" name="sex" >
+              {$sex}
+            </select>
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield{if $error_day or $error_month or $error_year} error {/if}" >Birthday:</label>
+          <div>
+            <select  class="selectfield" name="month">
+              {$month}
+            </select>
+            <select  class="selectfield" name="day">
+              {$day}
+            </select>
+            <select  class="selectfield" name="year">
+              {$year}
+            </select>
+         </div>
+        </div>
+
+        <div>
+          <a class="hrefsignup" href="http://htmlbook.ru/html/!doctype" title="info">Why do I need to provide this?</a>
+        </div>
+
+        <div class="line">
+          <div class="labelfield">
+          </div>
+          <div class="registered"> 
+            {if $newUserRegistered}
+                <p>  New User Registered </p>
+            {else}
+                <input class="submitfield" type="submit" value="Sign Up" id="submit" />
+            {/if}
+          </div>
+        </div>
+
+     </div>
+            
+    </form>
+  </body>
+</html>

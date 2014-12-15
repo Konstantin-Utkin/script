@@ -1,19 +1,7 @@
 <?php
     require_once ("include/common.inc.php");
     
-    function numToMonth($month)
-    {
-        $setMonth=Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
-        for($i = 0; $i < 12; $i++)
-            if(($month-1) == $i)
-                return($setMonth[$i]);
-        return 0;
-    }
-        
-
-    if($_POST['email'] == "")
-        alert("Enter the email");
-    else
+    if($_POST['email'] != "")
     {
         $userDBData = getUserInfo($_POST['email']);
         $userObjData = new userInfo;
@@ -24,6 +12,6 @@
         $userObjData->sex = $userDBData[0]["login_sex"];
         list($userObjData->year, $month, $userObjData->day) = sscanf($userDBData[0]["login_birthday"], "%04s-%02s-%02s");
         $userObjData->month=numToMonth($month);
-        createVisualPage($userObjData, "view");
+        createSignupPage($userObjData, "", TEMPLATE_VIEW);
      
     }

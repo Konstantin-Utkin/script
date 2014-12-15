@@ -7,100 +7,92 @@
         include("templates/find.html");
     }
 
-    function createVisualPage($userData, $mode)
+
+    function createSignupPage($UserInfo, $errors, $visualform)
     {
+        $smarty = new Smarty();
 
         $setMonth=Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 
-        if ($mode == "signup")    
-            include("templates/part0_header_signup.html");
-        else
-            include("templates/part0_header_view.html");
+        $smarty->setTemplateDir('D:\Google\Server2Go\htdocs\script\lab7\templates');
 
-        include("templates/part1_fname.html");
-        echo($userData->fname);
+        $smarty->assign('error_fname', $errors['fname']);
+        $smarty->assign('error_lname', $errors['lname']);
+        $smarty->assign('error_email', $errors['email']);
+        $smarty->assign('error_remail', $errors['remail']);
+        $smarty->assign('error_password', $errors['password']);
+        $smarty->assign('error_sex', $errors['sex']);
+        $smarty->assign('error_month', $errors['month']);
+        $smarty->assign('error_day', $errors['day']);
+        $smarty->assign('error_year', $errors['year']);
+        
 
-        include("templates/part2_lname.html");
-        echo($userData->lname);
+        $smarty->assign('fname', $UserInfo->fname);
+        $smarty->assign('lname', $UserInfo->lname);
+        $smarty->assign('email', $UserInfo->email);
+        $smarty->assign('remail', $UserInfo->remail);
 
-        include("templates/part3_email.html");
-        echo($userData->email);
-
-
-        if ($mode == "signup")    
-        {
-            include("templates/part4_remail.html");
-            echo($userData->remail);
-
-            include("templates/part5_password.html");
-            echo($userData->password);
-        }
-
-        include("templates/part6_sex.html");
-        if($userData->sex=="Male")
+        if($UserInfo->sex == "Male")
         {
             $html = "<option disabled>Select Sex:</option>";
             $html .= "<option selected>Male</option>";
             $html .= "<option>Female</option>";
+            $smarty->assign('sex', $html);
         }
-        elseif($userData->sex=="Female")
+        elseif($UserInfo->sex == "Female")
         {
             $html = "<option disabled>Select Sex:</option>";
             $html .= "<option>Male</option>";
             $html .= "<option selected>Female</option>";
+            $smarty->assign('sex', $html);
         }
         else
         {
             $html = "<option selected disabled>Select Sex:</option>";
             $html .= "<option>Male</option>";
             $html .= "<option>Female</option>";
+            $smarty->assign('sex', $html);
         }
-        echo $html;
 
-        include("templates/part7_month.html");
-        if($userData->month=="")
+        if($UserInfo->month == "")
             $html="<option selected disabled>Month:</option>";
         else
             $html="<option disabled>Month:</option>";
         for($i = 0; $i < 12; $i++)
         {
-            if($userData->month==$setMonth[$i])
-                $html .= "<option selected>".$setMonth[$i]."</option>\n";
+            if($UserInfo->month == $setMonth[$i])
+                $html .= "<option selected>" . $setMonth[$i] . "</option>\n";
             else
-                $html .= "<option>".$setMonth[$i]."</option>\n";
+                $html .= "<option>" . $setMonth[$i] . "</option>\n";
         }
-        echo $html;
+        $smarty->assign('month', $html);
 
-        include("templates/part8_day.html");
-        if($userData->day==0)
+        if($UserInfo->day == 0)
             $html="<option selected disabled>Day:</option>";
         else
             $html="<option disabled>Day:</option>";
         for($i = 1; $i <= 31; $i++)
         {
-            if($userData->day==$i)
-                $html .= "<option selected>".$i."</option>\n";
+            if($UserInfo->day == $i)
+                $html .= "<option selected>" . $i . "</option>\n";
             else
-                $html .= "<option>".$i."</option>\n";
+                $html .= "<option>" . $i . "</option>\n";
         }
-        echo $html;
+        $smarty->assign('day', $html);
 
-        include("templates/part9_year.html");
-        if($userData->year==0)
+        if($UserInfo->year == 0)
             $html="<option selected disabled>Year:</option>";
         else
             $html="<option disabled>Year:</option>";
         for($i = date(Y); $i > 1900; $i--)
         {
-            if($userData->year==$i)
-                $html .= "<option selected>".$i."</option>\n";
+            if($UserInfo->year==$i)
+                $html .= "<option selected>" . $i . "</option>\n";
             else
-                $html .= "<option>".$i."</option>\n";
+                $html .= "<option>" . $i . "</option>\n";
         }
-        echo $html;
+        $smarty->assign('year', $html);
+        $smarty->assign('newUserRegistered', $UserInfo->newUserRegistered);
 
-        if ($mode == "signup")    
-            include("templates/part10_footer_signup.html");
-        else
-            include("templates/part10_footer_view.html");
+        $smarty->display($visualform);
     }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <title>Sign Up</title>
+      <link rel="stylesheet" href="css/lab7add.css" />
+  </head>
+  <body>
+    <div class="form">
+      <form class="signupform" action="signup.php" method="post" id="loginform">
+        <div class="title">
+          <h1>Sign Up</h1>
+          <span class="border_bottom"></span>
+        </div>
+        {if $newUserRegistered}
+            <p>New User Registered</p>
+        {/if}
+        
+        <label>Surname</label>
+        <div class="formfield {if $errors_name} error {/if}">  
+          <input type="text" id="surname" name="surname"></br>
+        </div>
+        <label>Sex</label>
+        <select>
+          <option value="sex" selected disabled>Select Sex:</option>
+          <option>Female</option>
+          <option>Male</option>
+        </select>
+      </form>
+    </div>
+  </body>
+</html>

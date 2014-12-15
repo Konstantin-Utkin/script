@@ -1,0 +1,143 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2014-12-14 18:47:05
+         compiled from "templates\form.html" */ ?>
+<?php /*%%SmartyHeaderCode:20852548da7239af756-44706347%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '5bb24c1a624ababdae692c4e9dc7ada96c93183b' => 
+    array (
+      0 => 'templates\\form.html',
+      1 => 1418579220,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '20852548da7239af756-44706347',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_548da723a84b00_68212380',
+  'variables' => 
+  array (
+    'fname' => 0,
+    'lname' => 0,
+    'email' => 0,
+    'remail' => 0,
+    'password' => 0,
+    'sex' => 0,
+    'month' => 0,
+    'day' => 0,
+    'year' => 0,
+    'newUserRegistered' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_548da723a84b00_68212380')) {function content_548da723a84b00_68212380($_smarty_tpl) {?><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <title>Sign Up</title>
+      <link rel="stylesheet" href="css/signup.css" />
+  </head>
+  <body>
+    <form class="signupform" action="signup.php" method="post" id="loginform">
+      <div class="signupheader">
+        <div class="colorheader">
+          Sign Up
+        </div>
+          It's free and always will be
+        </div>
+      </div>
+      <div class="main">
+
+        <div class="line">
+          <label class="labelfield">First Name:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="fname" value="<?php echo $_smarty_tpl->tpl_vars['fname']->value;?>
+" />
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield" >Last Name:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="lname" value="<?php echo $_smarty_tpl->tpl_vars['lname']->value;?>
+" />
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield" >Your Email:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="email" value="<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+" />
+          </div>
+        </div>
+        <div class="line">
+          <label class="labelfield" >Re-enter Email:</label>
+          <div class="right">
+            <input class="inputfield" type="text" name="remail" value="<?php echo $_smarty_tpl->tpl_vars['remail']->value;?>
+" />
+          </div>
+        </div>
+        <div class="line">
+          <label class="labelfield" >New Password:</label>
+          <div class="right">
+            <input class="inputfield" type="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['password']->value;?>
+" />
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield" >I am:</label>
+          <div>
+            <select  class="selectfield" name="sex" >
+              <option selected disabled>Select Sex:</option>
+              <?php echo $_smarty_tpl->tpl_vars['sex']->value;?>
+
+            </select>
+          </div>
+        </div>
+
+        <div class="line">
+          <label class="labelfield" >Birthday:</label>
+          <div>
+            <select  class="selectfield" name="month">
+              <option selected disabled>Month:</option>
+              <?php echo $_smarty_tpl->tpl_vars['month']->value;?>
+
+            </select>
+            <select  class="selectfield" name="day">
+              <option selected disabled>Day:</option>
+              <?php echo $_smarty_tpl->tpl_vars['day']->value;?>
+
+            </select>
+            <select  class="selectfield" name="year">
+              <option selected disabled>Year:</option>
+              <?php echo $_smarty_tpl->tpl_vars['year']->value;?>
+
+            </select>
+         </div>
+        </div>
+
+        <div>
+          <a class="hrefsignup" href="http://htmlbook.ru/html/!doctype" title="info">Why do I need to provide this?</a>
+        </div>
+
+        <div class="line">
+          <div class="labelfield">
+          </div>
+          <div> 
+            <?php if ($_smarty_tpl->tpl_vars['newUserRegistered']->value==true) {?>
+                <p class="registred">  New User Registered </p>
+            <?php } else { ?>
+                <input class="submitfield" type="submit" value="Sign Up" id="submit" />
+            <?php }?>
+          </div>
+        </div>
+
+     </div>
+            
+    </form>
+  </body>
+</html><?php }} ?>
