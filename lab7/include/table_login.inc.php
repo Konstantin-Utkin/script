@@ -7,6 +7,13 @@
         $email = quoteDB($email);
         $query = "SELECT * FROM login_table WHERE login_email like '%" . $email . "%';";
         return queryDB($query);
+    }
+    
+    function getUserList()
+    {
+        $userList = array();
+        $userList = "SELECT * FROM login_table";
+        return queryDB($userList);
     }  
 
     function toMySQLDate($month, $day, $year)

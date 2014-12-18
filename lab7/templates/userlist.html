@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <title>Sign Up</title>
+      <link rel="stylesheet" href="css/userdata.css" />
+  </head>
+  <body>
+    <table>
+        <tr>
+            <th>First Name: </th>
+            <th>Last Name: </th>
+            <th>Email: </th>
+        </tr>
+        {foreach name = outer item = userData from = $userList}
+            <tr>
+            {foreach key = key item = item from = $userData}
+                {if $key == 'login_fname' or $key == 'login_sname' or $key == 'login_email'}
+                    <td>{$item}</td>
+                {/if}
+            {/foreach}
+            </tr>
+        {/foreach}
+        <tr>
+        </tr>
+    <table>
+  </body>
+</html>

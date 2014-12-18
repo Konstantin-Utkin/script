@@ -8,3 +8,4 @@
     define('SMARTY_DIR', 'include/Smarty-3.1.21/libs/');
     define('TEMPLATE_SIGNUP', 'templates/form.html');
     define('TEMPLATE_VIEW', 'templates/view.html');
+    define('TEMPLATE_USERLIST', 'templates/userlist.html');

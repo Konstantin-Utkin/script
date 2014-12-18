@@ -1,0 +1,22 @@
+CREATE TABLE person(
+  cityid INT(11) UNSIGNED,
+  name VARCHAR(255),
+  FOREIGN KEY (cityid) REFERENCE city(id)
+  ON DELETE CASCADE
+);
+ON DELETE SET NULL
+SUM
+
+SELECT SUM(population)
+FROM City
+WHERE City.id IN (3,4);
+
+SELECT AVG(population)
+
+SELECT MAX(population)
+
+SELECT MIN(population)
+
+SELECT COUNT(*)
+
+SELECT COUNT(DISTINCT name)

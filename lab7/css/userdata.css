@@ -1,0 +1,19 @@
+table
+{
+    background: linear-gradient(to top, #dfe3ef, #fcfdfe);
+}
+
+th
+{
+    height: 35px;  
+    font-family: Arial;
+    border: 1px solid #9babc5;
+    background: linear-gradient(to top, #75ae5c, #67a54b);
+}
+
+td
+{
+    height: 35px;  
+    font-family: Arial;
+    border: 1px solid #9babc5;
+}

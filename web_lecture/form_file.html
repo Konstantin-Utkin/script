@@ -1,0 +1,71 @@
+<!DOOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title> Form </title>
+  </head>
+  <body>
+    <h1> Form </h1>
+    <form action="/hello.php" method = "post" enctype="text/plain">
+      <label>First name:</label>
+      </br>
+      <input type="text" name = "first_name">
+      </br>
+      <label>Last name:</label>
+      </br>
+      <input type="text" name = "last_name">
+      </br>
+      <label>City:</label>
+      </br>
+      <input type="text" name = "city">
+      </br>
+      <label>Photo:</label>
+      </br>
+      <input type="file" name = "photo">
+      </br>
+      <input type="submit" value="Send">
+    </form>
+  </body>
+</html>
+
+<!--
+POST /hello.php HTTP/1.1
+Server: local
+...
+Content-Type: application/x-www-form-urlencoded
+
+first_name=Joanne+K&last_name=Rowling&city=Yate
+-->
+
+
+
+
+<!-- ====================================================================
+enctype = "multipart/form-data" -->
+
+<!--
+POST /hello.php HTTP/1.1
+Server: local
+...
+Content-Type: multipart/form-data; boundary=--...myboundary 
+
+--myboundary
+Content-Disposition: form-data; name=first_name
+
+Joanne K
+--myboundary
+Content-Disposition: form-data; name=last_name
+
+Rowling
+--myboundary
+Content-Disposition: form-data; name=city
+
+Yate
+--myboundary
+Content-Disposition: form-data; name=photo; filename="me.jpg"
+Content-Type: image/jpeg
+
+бинарные данные
+--myboundary--
+-->
+

@@ -6,6 +6,14 @@
     {
         include("templates/find.html");
     }
+    
+    function createUserListView($userList)
+    {
+        $smarty = new Smarty();
+        $smarty->assign('userList', $userList);
+        $file = TEMPLATE_USERLIST;
+        $smarty->display(TEMPLATE_USERLIST);
+    }
 
 
     function createSignupPage($UserInfo, $errors, $visualform)
